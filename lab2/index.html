@@ -7,27 +7,105 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <div class="navbar-header">
+            <!-- <div class="navbar-header"> -->
+                <a class="navbar-brand" href="#">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-1"  aria-expanded="false" >
                 <span class="navbar-toggler-icon"></span>
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
              </button>
-             <a class="navbar-brand" href="#">Logo</a>
-            </div> 
+             
+            <!-- </div>  -->
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
                  <li class="active"><a href="#">Link</a></li>
-                 <li><a href="#">Link</a></li>
-                 <li><a href="#">Link</a></li>
+                 <li><a href="#main-page">Strona Główna</a></li>
+                 <li><a href="index2.html">strona 2</a></li>
+                 <li><a href="#stopka">Stopka</a></li>
                  </ul>
                 </div>
         </div> 
     </nav> 
-        
+        <header>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="Zdjecia/dc.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/maxresdefault.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/Boeing-737-400-SP-LLC-commontask.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/tigerplane_01.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/air-new-zealand-zk-okq-all-black--pmdg-boeing-777-300er-8k-248945-1719461310-L8vro.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/pu1q18OYhk1iqc5xhoQM.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/Pokemon_Jets.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Zdjecia/All_Nippon_Airways_Boeing_747-400_yellow_pokemon.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Poprzedni</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Następny</span>
+                </button>
+            </div>
+        </header>
+        <section id="main-page" class="jumbotron">
+            <div class="container">
+                <h1>Boeing 737</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam itaque, est, sapiente hic animi ad sequi veniam nam eum voluptatibus rem! Corporis eligendi perspiciatis minus praesentium libero, nam delectus rerum.
+                Corporis distinctio hic, mollitia quia, sunt dolorem maiores similique architecto officiis laborum minima doloribus quae nihil commodi veniam officia voluptatibus, placeat provident illo quas et recusandae? Earum et architecto omnis?
+                Sequi iure id eveniet eos quo obcaecati suscipit, magni nihil cumque esse consectetur expedita harum! Quia doloremque aliquam incidunt! Animi rerum voluptatum laboriosam necessitatibus nulla, similique quae id error rem.
+                Nostrum, delectus? Consectetur dignissimos, ut voluptatem dolorem eius autem ex aperiam hic natus, cum cumque, architecto dolorum. Sit mollitia qui facilis itaque quas! Amet maxime aut temporibus deleniti! Libero, laudantium?
+                Voluptatibus corporis officia assumenda earum natus aliquam illum velit? Labore, maiores saepe culpa alias deserunt reiciendis officia. Exercitationem modi non tenetur provident quo dolores! Veniam officia hic ut aperiam ipsam!</p>
+
+            </div>
+        </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+    <footer id="stopka">
+      <div class="container py-4">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+          Polityka prywatności
+        </button>
+      </div>
+    </footer>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myModalLabel">Polityka prywatności</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zamknij"></button>
+          </div>
+          <div class="modal-body">
+            <h1>Polityka Prywatności</h1>
+            <p>
+              No jest 
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<p></p>Strone wykonał: <a href="mailto:21305@student.ans-elblag.pl">Kamil Sutuła 21305</a>
+  </body>
+</html>
 </html>
