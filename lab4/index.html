@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="js/forms.js"></script>
-    <link rel="stylesheet" href="Style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-
+    <title>Formularz kontaktowy</title>
+    <script src="js/forms.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <form action="index.html#kontakt" method="post" onsubmit="return checkForm();" >
-        <fieldset>
-            <legend>Formularz kontaktowy</legend>
-            <p id="im" class="hide"></p>
-            <label for="contactName">Imię</label>
-            <input type="text" id="contactName"/>
-            <p id="em" class="hide"></p>
-            <label for="contactEmail">Email</label>
-            <input type="text" id="contactEmail" />
-            <input type="submit" value="Wyślij" />
-        </fieldset>
-    </form> 
+    <div class="container mt-5">
+        <form action="index.html#kontakt" method="post" onsubmit="return checkForm();">
+            <fieldset>
+                <legend>Formularz kontaktowy</legend>
+                
+                <div class="mb-3 form-group" id="groupName">
+                    <p id="errorName" class="hide text-danger">Podanie imienia jest wymagane!</p>
+                    <label for="contactName" class="form-label">Imię i nazwisko</label>
+                    <input type="text" class="form-control" id="contactName" onblur="validateName()">
+                </div>
+
+                <div class="mb-3 form-group" id="groupEmail">
+                    <p id="errorEmail" class="hide text-danger">Adres email jest wymagany!</p>
+                    <label for="contactEmail" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="contactEmail" onblur="validateEmail()">
+                </div>
+
+                <div class="mb-3 form-group" id="groupInfo">
+                    <p id="errorInfo" class="hide text-danger">Wiadomość jest wymagana (max 250 znaków)!</p>
+                    <label for="contactInfo" class="form-label">Informacja</label>
+                    <textarea id="contactInfo" class="form-control" rows="4" maxlength="250" onblur="validateInfo()"></textarea>
+                </div>
+
+                <input type="submit" value="Wyślij" class="btn btn-primary">
+            </fieldset>
+        </form>
+    </div>
+    <footer style="text-align: center;">Strone wykonał: <a href="mailto:21305@student.ans-elblag.pl">Kamil Sutuła 21305</a></footer>
 </body>
 </html>
