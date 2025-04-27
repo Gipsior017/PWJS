@@ -3,16 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Lab 5 - Twoje Imie Nazwisko</title>
   <link rel="stylesheet" href="style/style.css">
-  <script src="script/script.js" defer></script>
 </head>
 <body>
+  <header>
+    <h1>Formularze Tablice i Quiz</h1>
+    <nav>
+      <ul>
+        <li><a href="#main-page">Strona główna</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h1>Dodaj własne elementy do tablicy</h1>
+    <input type="text" id="wart" value="Imie">
+    <div class="button-row">
+      <button onclick="napocz()">Na początek</button>
+      <button onclick="nakon()">Na koniec</button>
+    </div>
     
-  
+    <div id="wypisz"></div>
+    <button onclick="ile()">Ile paragrafów?</button>
+    <div id="wynik"></div>
+  </section>
 
-  <footer class="text-center mt-5">
+  <section>
+    <button onclick="pierwszy()">Wyświetl pierwszy element tablicy</button>  
+    <div id="pierwszy-element"></div>
+  </section>
+
+  <section>
+    <h2>Nowa Tablica</h2>
+    <div id="nowa-tablica"></div>
+  </section>
+
+  <section id="main-page">
+    <h2>Twoje Dane</h2>
+    <input type="text" name="Imie" id="imie">
+    <input type="text" name="Nazwisko" id="nazwisko">
+    <p id="dane1"></p>
+    <p id="dane2"></p>
+    <button onclick="pokazDane()">Pokaż moje dane</button>
+    <div id="wypisz-polowe"></div>
+  </section>
+
+  <section>
+    <h2>Quiz</h2>
+    <div id="quiz"></div>
+    <button onclick="startQuiz()">Rozpocznij Quiz</button>
+  </section>
+
+  <footer>
     Stronę wykonał: <a href="mailto:21305@student.ans-elblag.pl">21305@student.ans-elblag.pl</a>
   </footer>
+
+<script>
+// TABLICA GŁÓWNA
+const total = ['Element1', 'Element2', 'Element3', 'Element4', 'Element5'];
+
+function napocz() {
+  const wartosc = document.getElementById('wart').value;
+  total.unshift(wartosc);
+  document.getElementById('wypisz').innerHTML = total.join(", ");
+}
+
+function nakon() {
+  const wartosc = document.getElementById('wart').value;
+  total.push(wartosc);
+  document.getElementById('wypisz').innerHTML = total.join(", ");
+}
+
+function pierwszy() {
+  document.getElementById('pierwszy-element').innerHTML = '<p>Pierwszy element: <strong>' + total[0] + '</strong></p>';
+  // Zmieniamy ostatni element
+  total[total.length-1] = 'Nowa wartość';
+  document.getElementById('pierwszy-element').innerHTML += '<p>Ostatni element po zmianie: <strong>' + total[total.length-1] + '</strong></p>';
+}
+
+function ile() {
+  const pa = document.getElementsByTagName('p').length;
+  document.getElementById('wynik').innerHTML = 'Na stronie jest ' + pa + ' paragrafów (elementów < p>).';
+}
+
+// NOWA TABLICA
+const nowaTablica = ['Jabłko', 'Banan', 'Gruszka'];
+document.getElementById('nowa-tablica').innerHTML =
+  '<p>Pierwszy element: ' + nowaTablica[0] + '</p>' +
+  '<p>Ostatni element: ' + nowaTablica[nowaTablica.length-1] + '</p>';
+
+nowaTablica.unshift('Ananas');
+document.getElementById('nowa-tablica').innerHTML += '<p>Po dodaniu na początek: ' + nowaTablica[0] + '</p>';
+
+// DOM - Twoje Dane
+function pokazDane() {
+  const imie = document.getElementById('imie').value;
+  const nazwisko = document.getElementById('nazwisko').value;
+
+  document.getElementById('dane1').innerHTML = 'Imię: ' + imie;
+  document.getElementById('dane2').innerHTML = 'Nazwisko: ' + nazwisko;
+
+  // Pętle - wypisanie połowy tablicy total
+  let wynik = '';
+  let i = 0;
+  while (i < total.length/2) {
+    wynik += total[i] + ', ';
+    i++;
+  }
+  wynik += '<br> (while)';
+
+  wynik += '<br>';
+
+  for (let j = 0; j < Math.floor(total.length/2); j++) {
+    wynik += total[j] + ', ';
+  }
+  wynik += '<br> (for)';
+
+  document.getElementById('wypisz-polowe').innerHTML = wynik;
+}
+
+
+// QUIZ
+const questions = [
+
+  ['Jakiego Boeinga nazywamy "królem nieba"?', 747],
+  ['Ile silników ma boeing 767? ',2 ],
+  ['Ile silników ma boeing 777?', 2],
+  ['Ile silników ma boeing 787?', 2],
+  ['Ile silników ma boeing 737?', 2],
+  ['Ile silników ma boeing 747?', 4],
+  ['Ile silników ma boeing 757?', 2],
+  ['A380 jest większy niż 747? (prawda/falsz)', 'prawda']
+];
+
+function startQuiz() {
+  let score = 0;
+  for (let i = 0; i < questions.length; i++) {
+    const answer = prompt(questions[i][0]);
+    if (typeof questions[i][1] === 'number') {
+    if (parseInt(answer) === questions[i][1]) {
+        alert('Prawidłowa odpowiedź!');
+        score++;
+    } else {
+        alert('Błąd. Prawidłowa odpowiedź to ' + questions[i][1]);
+    }
+} else {
+    if (answer.trim().toLowerCase() === questions[i][1].toLowerCase()) {
+        alert('Prawidłowa odpowiedź!');
+        score++;
+    } else {
+        alert('Błąd. Prawidłowa odpowiedź to ' + questions[i][1]);
+    }
+}
+  }
+  document.getElementById('quiz').innerHTML = 'Twój wynik: ' + score + '/' + questions.length;
+}
+</script>
+
 </body>
 </html>
