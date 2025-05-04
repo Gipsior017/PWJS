@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz lotniczy</title>
+  <link rel="stylesheet" href="Style/styleIndex.css">
+  <style>
+    /* Slideshow styles */
+    #slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      background: #000;
+    }
+    #slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    #slideshow img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Quiz lotniczy</h1></header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="pytania.html">Wszystkie pytania</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Slideshow Section -->
+  <div id="slideshow"></div>
+
+  <footer>Quiz lotniczy &copy; 2025</footer>
+
+  <script>
+    // Fetch list of images from pytania.json
+    fetch('pytania.json')
+      .then(res => res.json())
+      .then(data => {
+        const photos = (Array.isArray(data.Questions) ? data.Questions : data.questions)
+          .map(q => q.photo)
+          .filter((v, i, a) => v && a.indexOf(v) === i);
+        const slideshow = document.getElementById('slideshow');
+        photos.forEach((src, idx) => {
+          const img = document.createElement('img');
+          img.src = src;
+          if (idx === 0) img.classList.add('active');
+          slideshow.appendChild(img);
+        });
+        let current = 0;
+        setInterval(() => {
+          const imgs = slideshow.querySelectorAll('img');
+          imgs[current].classList.remove('active');
+          current = (current + 1) % imgs.length;
+          imgs[current].classList.add('active');
+        }, 10000);
+      })
+      .catch(err => console.error('Błąd ładowania zdjęć:', err));
+  </script>
+</body>
+</html>

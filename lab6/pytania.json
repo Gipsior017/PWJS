@@ -1,0 +1,436 @@
+{
+    "Questions": [
+        {
+          "id":"1",
+          "pytanie":"Co to za samolot?",
+          "photo":"zdjecia/a320.jpg",
+          "anwser":
+          {
+                    "a":"a320",
+                    "b":"B737",
+                    "c":"B717",
+                    "d":"A310"
+          },
+          "poprawna":"a"
+        },
+  
+      {
+        "id": "2",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/a319.jpg",
+        "answers": {
+          "a": "A319",
+          "b": "A320",
+          "c": "A321",
+          "d": "A318"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "3",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/a321.jpg",
+        "answers": {
+          "a": "A321",
+          "b": "A320",
+          "c": "A319",
+          "d": "A330"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "4",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/a330.jpg",
+        "answers": {
+          "a": "A330",
+          "b": "A340",
+          "c": "B777",
+          "d": "A350"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "5",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/a340.jpg",
+        "answers": {
+          "a": "A340",
+          "b": "A330",
+          "c": "B777",
+          "d": "A350"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "6",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/a350.jpg",
+        "answers": {
+          "a": "A350",
+          "b": "A330",
+          "c": "A380",
+          "d": "B787"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "7",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/a380.jpg",
+        "answers": {
+          "a": "A380",
+          "b": "A350",
+          "c": "B747",
+          "d": "B777"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "8",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b707.jpg",
+        "answers": {
+          "a": "B707",
+          "b": "B727",
+          "c": "A340",
+          "d": "A300"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "9",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b727.jpg",
+        "answers": {
+          "a": "B727",
+          "b": "B707",
+          "c": "DC-8",
+          "d": "DC-9"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "10",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b737.jpg",
+        "answers": {
+          "a": "B737",
+          "b": "B727",
+          "c": "A320",
+          "d": "A220"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "11",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b747.jpg",
+        "answers": {
+          "a": "B747",
+          "b": "B777",
+          "c": "A380",
+          "d": "B787"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "12",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b757.jpg",
+        "answers": {
+          "a": "B757",
+          "b": "B767",
+          "c": "A330",
+          "d": "A321"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "13",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b767.jpg",
+        "answers": {
+          "a": "B767",
+          "b": "B757",
+          "c": "A330",
+          "d": "A350"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "14",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/B777.jpg",
+        "answers": {
+          "a": "B777",
+          "b": "B787",
+          "c": "B767",
+          "d": "A350"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "15",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/b787.jpg",
+        "answers": {
+          "a": "B787",
+          "b": "A350",
+          "c": "B777",
+          "d": "B737"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "16",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/717.jpg",
+        "answers": {
+          "a": "B717",
+          "b": "B707",
+          "c": "B737",
+          "d": "A310"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "17",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/crj200.jpg",
+        "answers": {
+          "a": "Bombardier CRJ200",
+          "b": "Boeing 717",
+          "c": "Airbus A318",
+          "d": "Boeing 737"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "18",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/crj700.jpg",
+        "answers": {
+          "a": "Bombardier CRJ700",
+          "b": "Golfstream G550",
+          "c": "Dash 8 Q400",
+          "d": "Boeing 737"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "19",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/crj900.jpg",
+        "answers": {
+          "a": "Bombardier CRJ900",
+          "b": "Bombardier CS100",
+          "c": "Boeing 717",
+          "d": "Boeing 737"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "20",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/emb170.jpg",
+        "answers": {
+          "a": "Embraer EMB-170",
+          "b": "Bombardier CS100",
+          "c": "Boeing 717",
+          "d": "Mcdonnel Douglas MD-80"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "21",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/emb175.jpg",
+        "answers": {
+          "a": "EMB-175",
+          "b": "B707",
+          "c": "Dash 8 Q400",
+          "d": "Bombardier CS100"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "22",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/emb120.jpg",
+        "answers": {
+          "a": "EMB-120",
+          "b": "CRJ200",
+          "c": "EMB-145",
+          "d": "Bombardier Challenger 600"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "23",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/emb195.jpg",
+        "answers": {
+          "a": "EMB-195",
+          "b": "A320",
+          "c": "B737",
+          "d": "Dash 8 Q400"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "24",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/B.jpg",
+        "answers": {
+          "a": "bombini gusin",
+          "b": "Bombardiro Crocodilo",
+          "c": "CRJ900",
+          "d": "A318"
+        },
+        "poprawna": "b"
+      },
+      {
+        "id": "25",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/atr72.jpg",
+        "answers": {
+          "a": "ATR 72",
+          "b": "ATR 42",
+          "c": "Q400",
+          "d": "DHC-8"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "26",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/q400.jpg",
+        "answers": {
+          "a": "Q400",
+          "b": "ATR 72",
+          "c": "DHC-8",
+          "d": "DHC-6"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "27",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/dhc6.jpg",
+        "answers": {
+          "a": "DHC-6 Twin Otter",
+          "b": "Cessna 208",
+          "c": "DHC-8",
+          "d": "ATR 42"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "28",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/md80.jpg",
+        "answers": {
+          "a": "MD-80",
+          "b": "MD-11",
+          "c": "DC-10",
+          "d": "B727"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "29",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/md11.jpg",
+        "answers": {
+          "a": "MD-11",
+          "b": "DC-10",
+          "c": "MD-80",
+          "d": "L-1011 TriStar"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "30",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/dc10.jpg",
+        "answers": {
+          "a": "DC-10",
+          "b": "MD-11",
+          "c": "L-1011 TriStar",
+          "d": "B707"
+        },
+        "poprawna": "a"
+      },
+      {
+        "id": "31",
+        "pytanie": "Co to za samolot?",
+        "photo": "zdjecia/l1011.jpg",
+        "answers": {
+          "a": "L-1011 TriStar",
+          "b": "DC-10",
+          "c": "MD-11",
+          "d": "B707"
+        },
+        "poprawna": "a"
+      }
+    ],
+  
+      "open_questions": [
+        {
+          "id": "32",
+          "pytanie": "Podaj skrót Meteorological Aerodrome Report",
+          "poprawna": "METAR"
+        },
+        {
+          "id": "33",
+          "pytanie": "Podaj skrót Terminal Aerodrome Forecast",
+          "poprawna": "TAF"
+        },
+        {
+          "id": "34",
+          "pytanie": "Podaj skrót Standard Instrument Departure",
+          "poprawna": "SID"
+        },
+        {
+          "id": "35",
+          "pytanie": "Podaj skrót Standard Terminal Arrival Route",
+          "poprawna": "STAR"
+        },
+        {
+          "id": "36",
+          "pytanie": "Podaj skrót Instrument Landing System",
+          "poprawna": "ILS"
+        },
+        {
+          "id": "37",
+          "pytanie": "Podaj skrót Traffic Collision Avoidance System",
+          "poprawna": "TCAS"
+        },
+        {
+          "id": "38",
+          "pytanie": "Podaj skrót Ground Proximity Warning System",
+          "poprawna": "GPWS"
+        },
+        {
+          "id": "39",
+          "pytanie": "Podaj skrót Automatic Direction Finder",
+          "poprawna": "ADF"
+        },
+        {
+          "id": "40",
+          "pytanie": "Podaj skrót Visual Flight Rules",
+          "poprawna": "VFR"
+        },
+        {
+          "id": "41",
+          "pytanie": "Podaj skrót Instrument Flight Rules",
+          "poprawna": "IFR"
+        }
+      ]
+    }
+  
+  
+   
+    
+  

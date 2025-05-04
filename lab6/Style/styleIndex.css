@@ -1,0 +1,93 @@
+/* styleIndex.css - Styl dla strony głównej Quiz lotniczy */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ececec, #f5f5dc);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav     main"
+      "footer footer";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  /* HEADER */
+  header {
+    grid-area: header;
+    background: #f5deb3;
+    padding: 20px;
+    text-align: center;
+    font-size: 2.5em;
+    color: #333333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* NAV */
+  nav {
+    grid-area: nav;
+    background: #faf0e6;
+    padding: 30px 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    margin: 15px 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  nav a:hover {
+    background: #e0d4b0;
+  }
+  
+  /* MAIN CONTENT */
+  main {
+    grid-area: main;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  main .content-wrapper {
+    max-width: 800px;
+    background: #faf0e6;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  main h2 {
+    margin-top: 0;
+    color: #333333;
+  }
+  main p {
+    color: #444444;
+    line-height: 1.6;
+    margin: 15px 0;
+  }
+  
+  /* FOOTER */
+  footer {
+    grid-area: footer;
+    background: #f5deb3;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #333333;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+  
