@@ -89,7 +89,7 @@
       {
         "id": "8",
         "pytanie": "Co to za samolot?",
-        "photo": "zdjecia/b707.jpg",
+        "photo": "zdjecia/B707.jpg",
         "answers": {
           "a": "B707",
           "b": "B727",
@@ -101,7 +101,7 @@
       {
         "id": "9",
         "pytanie": "Co to za samolot?",
-        "photo": "zdjecia/b727.jpg",
+        "photo": "zdjecia/B727.jpg",
         "answers": {
           "a": "B727",
           "b": "B707",
@@ -113,7 +113,7 @@
       {
         "id": "10",
         "pytanie": "Co to za samolot?",
-        "photo": "zdjecia/b737.jpg",
+        "photo": "zdjecia/B737.jpg",
         "answers": {
           "a": "B737",
           "b": "B727",
@@ -125,7 +125,7 @@
       {
         "id": "11",
         "pytanie": "Co to za samolot?",
-        "photo": "zdjecia/b747.jpg",
+        "photo": "zdjecia/B747.jpg",
         "answers": {
           "a": "B747",
           "b": "B777",
@@ -137,7 +137,7 @@
       {
         "id": "12",
         "pytanie": "Co to za samolot?",
-        "photo": "zdjecia/b757.jpg",
+        "photo": "zdjecia/B757.jpg",
         "answers": {
           "a": "B757",
           "b": "B767",
@@ -149,7 +149,7 @@
       {
         "id": "13",
         "pytanie": "Co to za samolot?",
-        "photo": "zdjecia/b767.jpg",
+        "photo": "zdjecia/B767.jpg",
         "answers": {
           "a": "B767",
           "b": "B757",
