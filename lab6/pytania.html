@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wszystkie pytania i odpowiedzi</title>
+  <link rel="stylesheet" href="Style/styleIndex.css">
+  <style>
+    /* Dodatkowe style dla listy pytań */
+    .question-item {
+      background: #faf0e6;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .question-item h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    .question-photo {
+      width: 760px;
+      height: 520px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin: 10px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: block;
+      max-width: 100%;
+    }
+    .answers-list {
+      list-style: none;
+      padding: 0;
+    }
+    .answers-list li {
+      margin: 6px 0;
+      padding: 6px;
+      border-left: 4px solid transparent;
+    }
+    .answers-list li.correct {
+      border-color: green;
+      background: #e6f4ea;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Wszystkie pytania i odpowiedzi</h1></header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Strona główna</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="pytania.html">Wszystkie pytania</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="content-wrapper">
+      <div id="list-container"></div>
+    </div>
+  </main>
+  <footer>Quiz lotniczy &copy; 2025</footer>
+
+  <script>
+    fetch('pytania.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('list-container');
+        const questions = Array.isArray(data.Questions) ? data.Questions : data.questions;
+        questions.forEach(q => {
+          const item = document.createElement('div');
+          item.className = 'question-item';
+
+          const title = document.createElement('h3');
+          title.textContent = `${q.id}. ${q.pytanie}`;
+          item.appendChild(title);
+
+          if (q.photo) {
+            const img = document.createElement('img');
+            img.src = q.photo;
+            img.alt = 'Zdjęcie pytania';
+            img.className = 'question-photo';
+            item.appendChild(img);
+          }
+
+          const list = document.createElement('ul');
+          list.className = 'answers-list';
+          const answers = q.answers || q.anwser;
+          Object.entries(answers).forEach(([key, text]) => {
+            const li = document.createElement('li');
+            li.textContent = `${key}) ${text}`;
+            if (key === q.poprawna) li.classList.add('correct');
+            list.appendChild(li);
+          });
+          item.appendChild(list);
+
+          container.appendChild(item);
+        });
+      })
+      .catch(err => console.error('Błąd ładowania pytań:', err));
+  </script>
+</body>
+</html>

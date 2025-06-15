@@ -1,0 +1,93 @@
+header,nav,main,footer
+{
+    display: block;
+    width: 1078px;
+    
+}
+#container{
+    margin: auto;
+    position: relative;
+    width: 1078px;
+    height: auto;
+    border: 1px solid #ffffff
+}
+body{
+    color: #ffffff;
+    background-color: #000000;
+    
+    margin: 0px;
+    text-align: center;
+}
+header{
+    background: lightblue;
+    color: black;
+}
+footer{
+    color: blue;
+    background: gray;
+}
+main{
+    color: blueviolet;
+    background: gold;
+    height: auto;
+    padding-top: 30px;
+    overflow: hidden;
+}
+nav{
+    color: rgb(95, 145, 46);
+    background-color: lightcoral;
+    
+}
+#col_left{
+    background-color: beige;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+#col_center{
+    background-color: rgb(0, 195, 255);
+    height: auto;
+    width: 778px;
+    height: 200px;
+}
+footer{
+    
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif 10px;
+    clear: both;
+}
+a{
+    margin-right:30px ;
+}
+#logo{
+    position:absolute;
+    width: 200px;
+    height: 40px;
+    border:2px dotted #731980;
+    top:10px;
+    left:10px;
+}
+#logo img{
+    max-height: 80px;
+    height: 80px;
+}
+table,td{
+    border: black 1px solid;
+    border-collapse: collapse;
+    text-align:left;
+}
+td,th{
+    border-collapse: collapse;
+}
+.naglowek
+{
+    background-color: gray;
+}
+tr:nth-child(3),tr:nth-child(5),tr:nth-child(7)
+{
+ background-color: lightgreen;
+}
+tr:nth-child(4),tr:nth-child(6),tr:nth-child(8)
+{
+    background-color: lime;
+}
