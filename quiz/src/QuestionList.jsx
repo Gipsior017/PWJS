@@ -6,7 +6,7 @@ export default function QuestionList({ onBack }) {
   const [openQuestions, setOpenQuestions] = useState([]);
 
   useEffect(() => {
-    fetch("/pytania.json")
+    fetch("https://drive.google.com/file/d/1zlM0FacEYg8to-IvV4GA11iphRfcElpK/view?usp=sharing")
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data.Questions || []);

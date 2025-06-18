@@ -14,7 +14,7 @@ export default function Quiz({ nickname, onBack }) {
   const [inputAnswer, setInputAnswer] = useState("");
 
   useEffect(() => {
-    fetch("./pytania.json")
+    fetch("https://drive.google.com/file/d/1zlM0FacEYg8to-IvV4GA11iphRfcElpK/view?usp=sharing")
       .then((res) => res.json())
       .then((data) => {
         const closed = (data.Questions || []).map((q) => {
