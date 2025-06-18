@@ -14,7 +14,7 @@ export default function Quiz({ nickname, onBack }) {
   const [inputAnswer, setInputAnswer] = useState("");
 
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "pytania.json")
+     fetch("/pytania.json")
       .then((res) => res.json())
       .then((data) => {
         const closed = (data.Questions || []).map((q) => {

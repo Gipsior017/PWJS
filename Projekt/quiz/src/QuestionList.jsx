@@ -6,7 +6,7 @@ export default function QuestionList({ onBack }) {
   const [openQuestions, setOpenQuestions] = useState([]);
 
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "pytania.json")
+    fetch("/pytania.json")
       .then((res) => res.json())
       .then((data) => {
         setQuestions(data.Questions || []);
