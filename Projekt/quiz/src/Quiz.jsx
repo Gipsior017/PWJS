@@ -14,7 +14,7 @@ export default function Quiz({ nickname, onBack }) {
   const [inputAnswer, setInputAnswer] = useState("");
 
   useEffect(() => {
-    fetch("https://drive.google.com/file/d/1zlM0FacEYg8to-IvV4GA11iphRfcElpK/view?usp=sharing")
+    fetch("https://drive.google.com/uc?export=download&id=1zlM0FacEYg8to-IvV4GA11iphRfcElpK")
       .then((res) => res.json())
       .then((data) => {
         const closed = (data.Questions || []).map((q) => {
