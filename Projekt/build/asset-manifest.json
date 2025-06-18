@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PWJS/Projekt/Build/static/css/main.39376171.css",
-    "main.js": "/PWJS/Projekt/Build/static/js/main.f601332a.js",
-    "static/js/453.be46ab35.chunk.js": "/PWJS/Projekt/Build/static/js/453.be46ab35.chunk.js",
-    "index.html": "/PWJS/Projekt/Build/index.html",
-    "main.39376171.css.map": "/PWJS/Projekt/Build/static/css/main.39376171.css.map",
-    "main.f601332a.js.map": "/PWJS/Projekt/Build/static/js/main.f601332a.js.map",
-    "453.be46ab35.chunk.js.map": "/PWJS/Projekt/Build/static/js/453.be46ab35.chunk.js.map"
+    "main.css": "/PWJS/Projekt/build/static/css/main.39376171.css",
+    "main.js": "/PWJS/Projekt/build/static/js/main.647027a3.js",
+    "static/js/453.be46ab35.chunk.js": "/PWJS/Projekt/build/static/js/453.be46ab35.chunk.js",
+    "index.html": "/PWJS/Projekt/build/index.html",
+    "main.39376171.css.map": "/PWJS/Projekt/build/static/css/main.39376171.css.map",
+    "main.647027a3.js.map": "/PWJS/Projekt/build/static/js/main.647027a3.js.map",
+    "453.be46ab35.chunk.js.map": "/PWJS/Projekt/build/static/js/453.be46ab35.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39376171.css",
-    "static/js/main.f601332a.js"
+    "static/js/main.647027a3.js"
   ]
 }
