@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PWJS/Projekt/build/static/css/main.39376171.css",
+    "main.js": "/PWJS/Projekt/build/static/js/main.8327ad75.js",
+    "static/js/453.be46ab35.chunk.js": "/PWJS/Projekt/build/static/js/453.be46ab35.chunk.js",
+    "index.html": "/PWJS/Projekt/build/index.html",
+    "main.39376171.css.map": "/PWJS/Projekt/build/static/css/main.39376171.css.map",
+    "main.8327ad75.js.map": "/PWJS/Projekt/build/static/js/main.8327ad75.js.map",
+    "453.be46ab35.chunk.js.map": "/PWJS/Projekt/build/static/js/453.be46ab35.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39376171.css",
+    "static/js/main.8327ad75.js"
+  ]
+}
