@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/PWJS/quiz/build/static/css/main.39376171.css",
-    "main.js": "/PWJS/quiz/build/static/js/main.3cbbffbf.js",
-    "static/js/453.be46ab35.chunk.js": "/PWJS/quiz/build/static/js/453.be46ab35.chunk.js",
-    "index.html": "/PWJS/quiz/build/index.html",
-    "main.39376171.css.map": "/PWJS/quiz/build/static/css/main.39376171.css.map",
-    "main.3cbbffbf.js.map": "/PWJS/quiz/build/static/js/main.3cbbffbf.js.map",
-    "453.be46ab35.chunk.js.map": "/PWJS/quiz/build/static/js/453.be46ab35.chunk.js.map"
+    "main.css": "/PWJS/Projekt/Build/static/css/main.39376171.css",
+    "main.js": "/PWJS/Projekt/Build/static/js/main.bf4ce727.js",
+    "static/js/453.be46ab35.chunk.js": "/PWJS/Projekt/Build/static/js/453.be46ab35.chunk.js",
+    "index.html": "/PWJS/Projekt/Build/index.html",
+    "main.39376171.css.map": "/PWJS/Projekt/Build/static/css/main.39376171.css.map",
+    "main.bf4ce727.js.map": "/PWJS/Projekt/Build/static/js/main.bf4ce727.js.map",
+    "453.be46ab35.chunk.js.map": "/PWJS/Projekt/Build/static/js/453.be46ab35.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39376171.css",
-    "static/js/main.3cbbffbf.js"
+    "static/js/main.bf4ce727.js"
   ]
 }
