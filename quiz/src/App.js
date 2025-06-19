@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Quiz from "./Quiz";
-import QuestionList from "./QuestionList";
 import Leaderboard from "./Leaderboard";
 import "./App.css";
 
@@ -73,9 +72,6 @@ function App() {
           <div>
             <button onClick={startQuiz} style={{ margin: "0.5rem" }}>
               Rozpocznij quiz
-            </button>
-            <button onClick={() => setScreen("answers")} style={{ margin: "0.5rem" }}>
-              Przeglądaj pytania
             </button>
             <button onClick={() => setScreen("leaderboard")} style={{ margin: "0.5rem" }}>
               Tablica wyników

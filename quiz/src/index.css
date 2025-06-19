@@ -1,10 +1,12 @@
 html, body, #root {
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
 
 /* Motyw jasny */
 body.light {
@@ -20,8 +22,8 @@ body.dark {
 
 /* Ogólne przyciski (np. menu) */
 button {
-  background-color: #e0e0e0;
-  color: #000;
+  background-color: #cac8c8;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   padding: 0.6em 1.2em;
@@ -31,7 +33,7 @@ button {
 }
 
 body.dark button {
-  background-color: #333;
+  background-color: #6ab2ec;
   color: #fff;
 }
 
@@ -96,6 +98,6 @@ body.light .answer-button {
 }
 
 body.dark .answer-button {
-  background-color: #333;
-  color: #fff;
+  background-color: #ff0000;
+  color: #ffffff;
 }

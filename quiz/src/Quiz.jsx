@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { db } from "./firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 
 const shuffleArray = (arr) => [...arr].sort(() => Math.random() - 0.5);
 
@@ -14,25 +14,41 @@ export default function Quiz({ nickname, onBack }) {
   const [inputAnswer, setInputAnswer] = useState("");
 
   useEffect(() => {
-    fetch("./pytania.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const closed = (data.Questions || []).map((q) => {
-          const entries = Object.entries(q.answers);
-          const shuffledAnswers = shuffleArray(entries);
-          return { ...q, shuffledAnswers, open: false };
+    const fetchQuestions = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "questions"));
+        const fetchedQuestions = [];
+        querySnapshot.forEach((doc) => {
+          const q = doc.data();
+          if (q.type === "closed") {
+            const shuffledAnswers = shuffleArray(Object.entries(q.options));
+            fetchedQuestions.push({
+              ...q,
+              open: false,
+              shuffledAnswers,
+              poprawna: q.correct,
+              pytanie: q.question,
+            });
+          } else {
+            fetchedQuestions.push({
+              ...q,
+              open: true,
+              poprawna: q.correct,
+              pytanie: q.question,
+            });
+          }
         });
 
-        const open = (data.open_questions || []).map((q) => ({ ...q, open: true }));
+        const selected = shuffleArray(fetchedQuestions).slice(0, 15);
+        setQuestions(selected);
+        setLoading(false);
+      } catch (error) {
+        console.error("Błąd ładowania z Firestore:", error);
+        setLoading(false);
+      }
+    };
 
-        const combined = shuffleArray([...closed, ...open]).slice(0, 15);
-        setQuestions(combined);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Błąd ładowania JSON:", error);
-        setLoading(false);
-      });
+    fetchQuestions();
   }, []);
 
   const handleAnswer = (answer) => {
@@ -95,7 +111,7 @@ export default function Quiz({ nickname, onBack }) {
       <p>{q.pytanie}</p>
       {q.photo && (
         <img
-          src={`/${q.photo}`}
+          src={q.photo}
           alt="Zdjęcie"
           style={{
             maxWidth: "90%",
@@ -139,38 +155,28 @@ export default function Quiz({ nickname, onBack }) {
             const isCorrect = key === q.poprawna;
             const isSelected = key === selected;
 
-            let bg = "#000";
-            if (selected !== null) {
-              if (isCorrect) bg = "lightgreen";
-              else if (isSelected) bg = "salmon";
-            }
-
             return (
               <button
-  key={key}
-  onClick={() => handleAnswer(key)}
-  disabled={selected !== null}
-  className="answer-button"
-  style={{
-    backgroundColor:
-      selected !== null
-        ? isCorrect
-          ? "lightgreen"
-          : isSelected
-          ? "salmon"
-          : ""
-        : "",
-    color:
-      selected !== null && isCorrect
-        ? "#000"
-        : selected !== null && isSelected
-        ? "#fff"
-        : "",
-  }}
->
-  {value}
-</button>
-
+                key={key}
+                onClick={() => handleAnswer(key)}
+                disabled={selected !== null}
+                style={{
+                  backgroundColor:
+                    selected !== null
+                      ? isCorrect
+                        ? "lightgreen"
+                        : isSelected
+                        ? "salmon"
+                        : ""
+                      : "",
+                  color:
+                    selected !== null && isSelected
+                      ? "#fff"
+                      : "#000",
+                }}
+              >
+                {value}
+              </button>
             );
           })}
         </div>
