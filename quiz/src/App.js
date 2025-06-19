@@ -82,7 +82,6 @@ function App() {
 
       {screen === "quiz" && <Quiz nickname={nickname} onBack={() => setScreen("menu")} />}
       {screen === "leaderboard" && <Leaderboard onBack={() => setScreen("menu")} />}
-      {screen === "answers" && <QuestionList onBack={() => setScreen("menu")} />}
     </div>
   );
 }
