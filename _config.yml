@@ -1,0 +1,3 @@
+exclude:
+  - node_modules
+  - lab8/Dev/my-app/node_modules
